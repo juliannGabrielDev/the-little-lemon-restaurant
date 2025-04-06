@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@theme {
+	--font-karla: "karla", "sans-serif";
+	--font-markazi: "Markazi Text", "serif";
+
+	--color-primary-green: #495e57;
+	--color-primary-yellow: #f4ce14;
+	--color-highlight-white: #edefee;
+	--color-secondary-coral: #ee9972;
+	--color-secondary-coral-light: #f4c2b0;
+
+	--breakpoint-xs: 30rem;
+}
+@utility scrollbar-hidden {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+/*=============================================================*/
+@font-face {
+	font-family: "Karla";
+	src: url("./assets/fonts/Karla/Karla-VariableFont_wght.ttf")
+			format("truetype"),
+		url("./assets/fonts/Karla/static/Karla-Bold.ttf") format("truetype");
+	font-weight: 400 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Markazi Text";
+	src: url("./assets/fonts/Markazi_Text/MarkaziText-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 400 700;
+	font-style: normal;
+}
