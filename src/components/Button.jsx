@@ -42,7 +42,7 @@ const Button = ({
 	if (to) {
 		return (
 			<Link to={to} className={buttonClasses} aria-label={ariaLabel} {...props}>
-				{children}
+				<span className="whitespace-nowrap">{children}</span>
 			</Link>
 		);
 	}
@@ -56,7 +56,7 @@ const Button = ({
 			aria-label={ariaLabel}
 			{...props}
 		>
-			{children}
+			<span className="whitespace-nowrap">{children}</span>
 		</button>
 	);
 };
