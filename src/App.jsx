@@ -1,9 +1,23 @@
-function App() {
-  return (
-    <>
-      <h1>The Little Lemon Restaurant</h1>
-    </>
-  );
-}
+import { Routes, Route } from "react-router-dom";
 
-export default App
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import HomePage from "./pages/HomePage";
+// import BookingPage from "./pages/BookingPage";
+// import ConfirmedBooking from "./pages/ConfirmedBooking";
+
+const App = () => {
+	return (
+		<>
+			<Nav />
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				{/* <Route path="/booking" element={<BookingPage />} /> */}
+				{/* <Route path="/confirmed-booking" element={<ConfirmedBooking />} /> */}
+			</Routes>
+			<Footer />
+		</>
+	);
+};
+
+export default App;

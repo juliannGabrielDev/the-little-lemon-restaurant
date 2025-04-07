@@ -1,0 +1,9 @@
+@media (width < 30rem) {
+	.hero {
+		background-image: linear-gradient(
+				rgba(0, 0, 0, 0.6) 80%,
+				rgba(0, 0, 0, 0.2) 100%
+			),
+			url("../assets/images/hero.jpg");
+	}
+}
