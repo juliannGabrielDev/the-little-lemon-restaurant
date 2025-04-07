@@ -71,7 +71,7 @@ const Nav = () => {
 				<MemorizedNavMenu />
 				<div className={styles.nav.actions}>
 					<button aria-label="Go to Basket">
-						<img src={Basket} className={styles.nav.icon} alt="" /> {/* alt vacío porque es decorativo */}
+						<img src={Basket} className={styles.nav.icon} alt="" />
 					</button>
 					<button
 						onClick={toggleMenu}
@@ -94,7 +94,6 @@ const NavMenu = () => {
 	return (
 		<ul className={styles.menu.desktop}>
 			<NavLink route="/">Home</NavLink>
-			<NavLink route="/about">About</NavLink>
 			<NavLink route="/menu">Menu</NavLink>
 			<NavLink route="/reservations">Reservations</NavLink>
 			<NavLink route="/order-online">Order Online</NavLink>

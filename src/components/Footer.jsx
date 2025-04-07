@@ -5,7 +5,6 @@ const footerLinks = [
 		title: "Doormat Navigation",
 		linkNames: [
 			"Home",
-			"About",
 			"Menu",
 			"Reservations",
 			"Order Online",
