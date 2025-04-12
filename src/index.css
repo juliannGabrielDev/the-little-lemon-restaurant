@@ -20,6 +20,12 @@
 		display: none;
 	}
 }
+.h1 {
+	@apply text-5xl md:text-6xl leading-9 font-medium font-markazi;
+}
+p {
+	@apply font-karla;
+}
 /*=============================================================*/
 @font-face {
 	font-family: "Karla";
