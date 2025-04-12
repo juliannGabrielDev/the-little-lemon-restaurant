@@ -156,8 +156,8 @@ const Hero = memo(() => {
 					className={styles.hero.image}
 					src={HeroImage}
 					alt="Delicious Mediterranean dish"
-					loading="eager" // Cargar inmediatamente para mejorar LCP
-					fetchPriority="high" // Priorizar esta imagen como crítica
+					loading="eager"
+					fetchPriority="high"
 				/>
 				<Button
 					variant="yellow"
@@ -307,13 +307,13 @@ const Specials = memo(() => {
 // Componente principal
 const HomePage = () => {
 	return (
-		<>
+		<main>
 			<Hero />
 			<DishesQuickView />
 			<Specials />
 			<Testimonials />
 			<OurHistory />
-		</>
+		</main>
 	);
 };
 
