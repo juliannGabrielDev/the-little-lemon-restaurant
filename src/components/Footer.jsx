@@ -2,6 +2,10 @@ import Logo from "../assets/images/icons/little-lemon-footer.png";
 
 const footerLinks = [
 	{
+		title: "Logo",
+		logo: true,
+	},
+	{
 		title: "Doormat Navigation",
 		linkNames: [
 			"Home",
@@ -16,9 +20,16 @@ const footerLinks = [
 		linkNames: ["Address", "Phone Number", "Email"],
 	},
 	{
-		title: "Social Media Link",
-		linkNames: ["Facebook", "X (Twitter)", "Instagram"],
-	},
+		title: "Social Media",
+		links: [
+			{
+				name: "Facebook", url: "https://www.facebook.com"
+			}, {
+				name: "X (Twitter)", url: "https://twitter.com/"
+			}, {
+				name: "Instagram", url: "https://www.instagram.com/"
+			}]
+	}
 ];
 
 const styles = {
@@ -53,20 +64,30 @@ const Footer = () => {
 					alt="Little Lemon Restaurant Logo"
 				/>
 
-				{footerLinks.map((section, index) => (
+				{footerLinks.map((section, index) => !section.logo && (
 					<div key={index}>
 						<p className={styles.section.title}>{section.title}</p>
 						<ul className={styles.section.list}>
-							{section.linkNames.map((linkName, idx) => (
-								<li key={idx}>
-									<a
-										href="#"
-										className={styles.link.base}
-										aria-label={`Go to ${linkName}`}
-									>
-										{linkName}
-									</a>
-								</li>
+							{section.links ? (
+								section.links.map(({ name, url }, idx) => {
+									return (
+										<li key={idx}>
+											<a
+												href={url}
+												target="_blank"
+												className={styles.link.base} aria-label={`Go to ${name}`}
+											>
+												{name}
+											</a>
+										</li>
+									)
+								})
+							) : section.linkNames.map((linkName, idx) => (<li key={idx}>
+								<a href="#" className={styles.link.base} aria-label={`Go to ${linkName}`}
+								>
+									{linkName}
+								</a>
+							</li>
 							))}
 						</ul>
 					</div>
