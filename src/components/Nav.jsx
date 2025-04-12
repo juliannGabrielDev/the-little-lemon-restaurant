@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect, useCallback, memo } from "react";
+import { useState, useEffect, useRef, useCallback, memo } from "react";
 
 import Logo from "../assets/images/icons/logo.svg";
 import Basket from "../assets/images/icons/Basket.svg";
@@ -19,7 +19,7 @@ const styles = {
 		desktop:
 			"hidden md:flex justify-self-center font-karla text-primary-green font-bold text-lg",
 		mobileBase:
-			"md:hidden fixed top-0 w-full h-screen z-10 flex items-center justify-center transition-[right] duration-300 ease-in-out font-karla font-bold text-2xl bg-primary-green text-highlight-white",
+			"md:hidden fixed top-0 w-full h-screen z-10 flex items-center justify-center font-karla font-bold text-2xl bg-primary-green text-highlight-white",
 		mobileOpen: "right-0",
 		mobileClosed: "-right-full",
 		closeButton: "absolute top-5 right-5 text-2xl",
@@ -103,25 +103,44 @@ const NavMenu = () => {
 };
 
 const NavMenuMobile = ({ isMenuMobileOpen, toggleMenu }) => {
+	const menuRef = useRef(null);
+	const closeButtonRef = useRef(null);
+
+	// Cuando el menú se abre, enfoca el primer elemento
+	useEffect(() => {
+		if (isMenuMobileOpen && closeButtonRef.current) {
+			closeButtonRef.current.focus();
+		}
+	}, [isMenuMobileOpen]);
+
+	// Eliminamos el código duplicado:
+	// - No necesitamos otro handler para Escape
+	// - No necesitamos añadir otro event listener
+	
 	const mobileMenuPosition = isMenuMobileOpen
 		? styles.menu.mobileOpen
 		: styles.menu.mobileClosed;
 
+	// Si el menú está cerrado, no lo renderices para evitar problemas de accesibilidad
+	if (!isMenuMobileOpen) {
+		return null;
+	}
+
 	return (
 		<div
+			ref={menuRef}
 			className={`${styles.menu.mobileBase} ${mobileMenuPosition}`}
 			role="dialog"
-			aria-modal="true"
+			aria-modal={true}
 			aria-label="Mobile Navigation Menu"
-			aria-hidden={!isMenuMobileOpen}
-			tabIndex={0}
 		>
 			<button
+				ref={closeButtonRef}
 				onClick={toggleMenu}
 				className={styles.menu.closeButton}
 				aria-label="Close Menu"
 			>
-				✕
+					✕
 			</button>
 			<ul className={styles.menu.list} role="menu">
 				<NavLink route="/" toggleMenu={toggleMenu}>

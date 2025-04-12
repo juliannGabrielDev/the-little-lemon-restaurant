@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import BookingPage from "./pages/BookingPage";
-// import ConfirmedBooking from "./pages/ConfirmedBooking";
+import SectionInProcess from "./pages/SectionInProcess";
 
 const App = () => {
 	return (
@@ -12,8 +12,10 @@ const App = () => {
 			<Nav />
 			<Routes>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/menu" element={<SectionInProcess />} />
 				<Route path="/reservations" element={<BookingPage />} />
-				{/* <Route path="/confirmed-booking" element={<ConfirmedBooking />} /> */}
+				<Route path="/order-online" element={<SectionInProcess />} />
+				<Route path="/login" element={<SectionInProcess />} />
 			</Routes>
 			<Footer />
 		</>
