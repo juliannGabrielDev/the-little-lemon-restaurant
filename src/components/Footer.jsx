@@ -17,7 +17,7 @@ const footerLinks = [
 	},
 	{
 		title: "Social Media Link",
-		linkNames: ["Facebook", "Twitter", "Instagram"],
+		linkNames: ["Facebook", "X (Twitter)", "Instagram"],
 	},
 ];
 
