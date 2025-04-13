@@ -51,7 +51,7 @@ export default function BookingPage() {
 
 	return (
 		<main className="p-4 pt-24 max-w-3xl mx-auto">
-			<Button id="back-button" variant="white" onClick={() => navigate("/")}>
+			<Button id="back-button" variant="white" className="mb-4" onClick={() => navigate("/")}>
 				<img src={Arrowback} alt="Back" />
 			</Button>
 			<h1 className="h1 text-primary-green text-center mb-5">

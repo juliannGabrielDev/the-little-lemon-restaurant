@@ -86,7 +86,7 @@ const styles = {
 		container:
 			"hero xs:bg-primary-green bg-center bg-no-repeat bg-cover text-highlight-white h-dvh xs:h-auto font-karla",
 		wrapper:
-			"relative flex flex-col xs:grid xs:grid-cols-[2fr_1fr] gap-5 md:gap-0 max-w-4xl h-full mx-auto pt-24 pb-4 px-4",
+			"relative flex flex-col xs:grid xs:grid-cols-[2fr_1fr] xl:flex gap-5 xl:gap-10 md:gap-0 max-w-4xl h-full mx-auto pt-24 pb-4 px-4",
 		heading: "h1 text-primary-yellow",
 		subheading: "font-markazi text-4xl col-span-2 mb-3",
 		description: "text-xl text-pretty max-w-lg row-start-2 row-end-3",
@@ -153,7 +153,7 @@ const Hero = memo(() => {
 					recipes served with a modern twist.
 				</p>
 				<img
-					className={styles.hero.image}
+					className={`${styles.hero.image} xl:absolute xl:-bottom-8 xl:right-4 xl:w-80 xl:h-80 object-cover`}
 					src={HeroImage}
 					alt="Delicious Mediterranean dish"
 					loading="eager"
