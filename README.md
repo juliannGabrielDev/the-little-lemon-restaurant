@@ -1,12 +1,64 @@
-# React + Vite
+# The Little Lemon Restaurant - Final Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the culmination of the Meta Front-End Developer Professional Certificate course on Coursera. It represents the practical application of the knowledge and skills acquired during the program.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Little Lemon Restaurant is a front-end web application designed to allow users to view the menu, reserve a table, and explore weekly specials. This project demonstrates the ability to build interactive and responsive user interfaces using modern web technologies.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   Menu display with categories.
+*   Online reservation system with real-time availability.
+*   Responsive design for different devices.
+*   Testimonials and weekly specials sections.
+*   Interactive navigation with mobile-friendly menus.
+
+## Technologies Used
+
+*   **HTML5:** For the semantic structure of the content.
+*   **CSS3:** For styling and visual design, including TailwindCSS for utility-first styling.
+*   **JavaScript (ES6+):** For interactivity and client-side logic.
+*   **React:** Main library for building the user interface.
+    *   React Router for navigation.
+    *   PropTypes for type-checking components.
+*   **Vite:** For fast development and build tooling.
+*   **TailwindCSS:** For responsive and modern styling.
+<!-- *   **Jest/React Testing Library:** For testing (if applicable). -->
+
+## Installation and Local Setup
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/juliannGabrielDev/the-little-lemon-restaurant.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd the-little-lemon-restaurant
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    # or if using yarn:
+    # yarn install
+    ```
+4.  Start the application in development mode:
+    ```bash
+    npm run dev
+    ```
+5.  Open your browser and visit `http://localhost:3000` (or the port your application uses).
+
+## Screenshots
+
+### Desktop
+
+![Desktop preview](./preview/desktop.png)
+
+### Mobile
+
+![Mobile preview](./preview/mobile.png)
+
+## Author
+
+*   **Julián Alejandro Gabriel Isidro**
+*   **Contact:** [GitHub](https://github.com/juliannGabrielDev)
